@@ -1,0 +1,80 @@
+.header {
+    padding-top: 20px;
+
+    & .container {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        align-items: center;
+    }
+}
+
+.nav__list {
+    display: flex;
+    align-items: center;
+
+    & .nav__item+.nav__item {
+        margin-left: 33px;
+    }
+
+    & .nav__link {
+        color: #83888F;
+        font-family: "Barlow";
+        font-size: 12px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 15px;
+        text-transform: uppercase;
+    }
+
+    & .nav__link:hover {
+        color: #333D4B;
+        text-decoration: underline;
+    }
+}
+
+.headerlogomobi {
+    display: none;
+}
+
+.button {
+    display: none;
+    border: none;
+    background: white;
+}
+
+@media only screen and (max-width: 576px) {
+    .nav {
+        display: none;
+    }
+
+    .button {
+        display: block;
+
+        .header__mobil {
+            display: none;
+        }
+
+        .header__mobi {
+            display: block;
+        }
+
+        &:focus {
+            .header__mobil {
+                display: block;
+            }
+
+            .header__mobi {
+                display: none;
+            }
+        }
+    }
+
+    .headerlogo {
+        display: none;
+    }
+
+    .headerlogomobi {
+        display: block;
+    }
+}
